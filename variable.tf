@@ -7,7 +7,7 @@ variable "author" {
     type = string
 }
 
-#network
+#network module
 
 variable "vpc" {
     description = "availability zone"
@@ -38,7 +38,7 @@ variable "public_subnets" {
     }
 }
 
-#app
+# app module
 variable "type" {
     description = "type of ec2 instance"
     type = string
@@ -47,4 +47,41 @@ variable "type" {
 variable "image" {
     description = "ami for the instance"
     type = string
+}
+
+# data module
+variable storage{
+    type = number
+}
+
+variable engine{
+    type = string
+}
+
+variable "engine_version" {
+    type = string
+}
+
+variable "instance_class" {
+    type = string
+}
+
+variable "username" {
+    type = string
+}
+
+variable "password" {
+    type = string
+}
+
+variable "subnet_ids" {
+    description = "fetch the private subnet ids"
+}
+
+variable "skip_snapshot" {
+    type = bool
+}
+
+variable "app_security_group_id" {
+    description = " attached application security group id"
 }
