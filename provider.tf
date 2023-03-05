@@ -9,7 +9,7 @@ terraform {
     backend "s3" {
         bucket = "abdelrhman-bucket"
         key    = "terraform.tfstate"
-        region = var.region
+        region = "eu-west-3"
     }
 }
 
