@@ -74,14 +74,7 @@ variable "password" {
     type = string
 }
 
-variable "subnet_ids" {
-    description = "fetch the private subnet ids"
-}
-
 variable "skip_snapshot" {
     type = bool
 }
 
-variable "app_security_group_id" {
-    description = " attached application security group id"
-}
