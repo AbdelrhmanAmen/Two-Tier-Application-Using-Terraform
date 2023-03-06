@@ -1,16 +1,17 @@
 # import the network 
 module "network-module" {
-    # source        = "github.com/AbdelrhmanAmen/Terraform-Network-Module"
-    source          ="../network-module"
+    source        = "github.com/AbdelrhmanAmen/Terraform-Network-Module"
+
     author          =var.author
     public_subnets  =var.public_subnets
     private_subnets =var.private_subnets
     vpc             =var.vpc
 }
 
+# import web app module
 module "app-module" {
-    # source    = "github.com/AbdelrhmanAmen/Terraform-Application-Module"
-    source      = "../app-module"
+    source    = "github.com/AbdelrhmanAmen/Terraform-Application-Module"
+
     type        =var.type
     image       =var.image
     vpc         =var.vpc
@@ -21,9 +22,10 @@ module "app-module" {
     ]
 }
 
+# import rds module
 module "data-module" {
-    # source                = "github.com/AbdelrhmanAmen/Terraform-RDS-Module"
-    source                  = "../data-module"
+    source                = "github.com/AbdelrhmanAmen/Terraform-RDS-Module"
+
     vpc                     =var.vpc
     author                  = var.author
     storage                 =var.storage
