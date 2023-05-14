@@ -32,11 +32,11 @@ Terraform is an infrastructure as code tool (IAC) that lets you build, change, a
    - Create internet Gateway. 
    - Create route table with its association between the public subnet and internet Gateway.
    - Create a subnet group of the private subnets.
-  ### APP Module
+  ### APP Module do the following:
    - Create a security group to allow HTTP/s traffic.
    - Create EC2 instance (will be attached to the public subnet which was created in the Netwok module).
    - Attach the security group to the EC2 instance.
-  ### RDS Module
+  ### RDS Module do the following:
    - Create a security group to allow the access from the EC2's security group only.
    - Create RDS instance (will be attached to the private subnet group which was created in the Netwok module).
    - Attach the security group to the RDS instance.
